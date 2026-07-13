@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Abdelhady — AI Engineer & IT Specialist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="#hero">AMA<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="btn-nav">Hire Me</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <p class="hero-pre fade-up">Hello, I'm</p>
+      <h1 class="hero-name fade-up">Ahmed<br /><span class="gradient-text">Abdelhady</span></h1>
+      <div class="hero-typed fade-up">
+        <span id="typed-text"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-desc fade-up">
+        Building intelligent systems and scalable software —<br />
+        from AI & Computer Vision to full-stack web applications.
+      </p>
+      <div class="hero-cta fade-up">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="Ahmed_CV.pdf" download="Ahmed_cv" class="btn-ghost">Download CV</a>
+      </div>
+      <div class="hero-stats fade-up">
+        <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Years Experience</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects Delivered</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">3.7</span><span class="stat-label">GPA</span></div>
+      </div>
+      <div class="hero-socials fade-up">
+        <a href="https://github.com/Hady210" target="_blank" rel="noopener" class="social-link" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/ahmed-mohamed-abdelhady-780799280" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.youtube.com/@ahmedmohmedabdelhady2735" target="_blank" rel="noopener" class="social-link youtube-link" title="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"><div class="wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label reveal">About Me</div>
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="avatar-wrap">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+              <img src="ahmed.jpg" alt="Ahmed Mohamed Abdelhady" class="avatar-photo" />
+            </div>
+            <div class="avatar-badge">
+              <span>Available for Work</span>
+              <span class="dot-live"></span>
+            </div>
+          </div>
+          <div class="about-cards">
+            <div class="mini-card">
+              <span class="mc-icon">🎓</span>
+              <div>
+                <strong>B.Sc. Information Technology</strong>
+                <p>Sinai University — GPA 3.7</p>
+              </div>
+            </div>
+            <div class="mini-card">
+              <span class="mc-icon">📍</span>
+              <div>
+                <strong>Red Sea, Egypt</strong>
+                <p>Open to remote worldwide</p>
+              </div>
+            </div>
+            <div class="mini-card">
+              <span class="mc-icon">🌐</span>
+              <div>
+                <strong>Languages</strong>
+                <p>Arabic (Native) · English (Professional)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <h2>I turn ideas into<br /><span class="gradient-text">intelligent products.</span></h2>
+          <p>
+            Computer Science graduate with a passion for AI engineering and full-stack development.
+            My graduation project <strong>Talkable</strong> — an AI-powered sign language recognition system —
+            earned top marks and is something I'm genuinely proud of.
+          </p>
+          <p>
+            I'm comfortable across the stack: from training deep learning models with TensorFlow,
+            to building responsive React frontends, to designing SQL databases and REST APIs.
+            Networking (CCNA-level) lets me think about systems holistically — not just the code,
+            but how it runs in the real world.
+          </p>
+          <p>
+            Currently teaching at Sinai University while actively taking on freelance projects.
+            If you have a challenging problem — AI, web, or IT — let's solve it together.
+          </p>
+          <div class="about-tags">
+            <span>AI Engineering</span><span>Computer Vision</span><span>Full-Stack Dev</span>
+            <span>Deep Learning</span><span>Networking</span><span>Teaching</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="section-label reveal">Technical Arsenal</div>
+      <h2 class="section-title reveal">What I Work With</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🤖</div>
+          <h3>AI & Machine Learning</h3>
+          <div class="skill-tags">
+            <span>TensorFlow</span><span>PyTorch</span><span>Keras</span>
+            <span>Scikit-learn</span><span>Computer Vision</span><span>NLP</span>
+            <span>LLMs</span><span>RAG</span><span>Generative AI</span>
+            <span>Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">💻</div>
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>JavaScript</span><span>C#</span>
+            <span>C++</span><span>HTML</span><span>CSS</span><span>SQL</span><span>Dart</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🌐</div>
+          <h3>Web Development</h3>
+          <div class="skill-tags">
+            <span>React</span><span>Flask</span><span>.NET MVC</span>
+            <span>REST APIs</span><span>Responsive Design</span><span>Flutter</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🗄️</div>
+          <h3>Databases</h3>
+          <div class="skill-tags">
+            <span>SQL Server</span><span>MySQL</span><span>Database Design</span>
+            <span>Query Optimization</span><span>Pandas</span><span>NumPy</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🔌</div>
+          <h3>Networking & IT</h3>
+          <div class="skill-tags">
+            <span>CCNA Level</span><span>IP Addressing</span><span>Subnetting</span>
+            <span>OSPF / RIP</span><span>VLANs</span><span>DNS / DHCP</span>
+            <span>TCP/IP</span><span>LAN/WAN</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🛠️</div>
+          <h3>Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span>Git</span><span>GitHub</span><span>Visual Studio</span>
+            <span>Android Studio</span><span>Agile/Scrum</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-label reveal">Portfolio</div>
+      <h2 class="section-title reveal">Featured Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal">
+          <div class="project-badge">Featured</div>
+          <div class="project-number">01</div>
+          <div class="project-tech-strip">
+            <span>Python</span><span>TensorFlow</span><span>Computer Vision</span><span>React</span><span>Flutter</span>
+          </div>
+          <h3>Talkable</h3>
+          <p>AI-powered sign language recognition system that translates hand gestures into real-time text and speech. Built with Computer Vision & Deep Learning — mobile + web interfaces included.</p>
+          <div class="project-highlights">
+            <div><span>🎯</span> Real-time gesture detection</div>
+            <div><span>📱</span> Mobile & web interfaces</div>
+            <div><span>🏆</span> Graduation project — top marks</div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-tech-strip">
+            <span>C#</span><span>.NET MVC</span><span>SQL Server</span>
+          </div>
+          <h3>Hotel Management System</h3>
+          <p>Full-stack web application for managing hotel services, bookings, and room availability with complete database integration and an intuitive admin dashboard.</p>
+          <div class="project-highlights">
+            <div><span>🏨</span> Booking & room management</div>
+            <div><span>🗄️</span> SQL Server backend</div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-tech-strip">
+            <span>SQL</span><span>SQL Server</span>
+          </div>
+          <h3>School Database System</h3>
+          <p>Relational database system for school records management — structured tables, complex queries, and optimized performance for large data sets.</p>
+          <div class="project-highlights">
+            <div><span>📊</span> Optimized queries</div>
+            <div><span>🏫</span> Complete records management</div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">04</div>
+          <div class="project-tech-strip">
+            <span>React</span><span>JavaScript</span><span>CSS</span>
+          </div>
+          <h3>Furniture E-Commerce</h3>
+          <p>Responsive e-commerce platform with product catalog, navigation, shopping cart flow, and a polished user-friendly UI built with React.</p>
+          <div class="project-highlights">
+            <div><span>🛒</span> Full shopping experience</div>
+            <div><span>📱</span> Fully responsive</div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">05</div>
+          <div class="project-tech-strip">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <h3>University Website</h3>
+          <p>Complete university web presence with responsive layout, multi-page navigation structure, and an accessible, user-centered design.</p>
+          <div class="project-highlights">
+            <div><span>🎓</span> Multi-page architecture</div>
+            <div><span>✅</span> Accessible & responsive</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <div class="section-label reveal">Career</div>
+      <h2 class="section-title reveal">Experience & Education</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Oct 2025 – Present</div>
+          <div class="tl-card">
+            <div class="tl-badge teaching">Teaching</div>
+            <h3>Teaching Assistant — IT & Web Development</h3>
+            <p class="tl-company">Sinai University · Arish, Egypt</p>
+            <ul>
+              <li>Teaching Web Technology, Web Design, Web Client, and Programming courses.</li>
+              <li>Configured and managed lab computers, networks, and software environments.</li>
+              <li>Guided students in building projects and improved their coding skills.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Jul 2025 – Oct 2025</div>
+          <div class="tl-card">
+            <div class="tl-badge instructor">Instructor</div>
+            <h3>Programming Instructor</h3>
+            <p class="tl-company">iSchool · Remote</p>
+            <ul>
+              <li>Delivered interactive programming and technology fundamentals lessons.</li>
+              <li>Helped students build problem-solving and coding skills through practical activities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Oct 2021 – Present</div>
+          <div class="tl-card">
+            <div class="tl-badge freelance">Freelance</div>
+            <h3>Software & AI Developer</h3>
+            <p class="tl-company">Freelance · Cairo, Egypt</p>
+            <ul>
+              <li>Developed Talkable — AI sign language recognition system using TensorFlow & Computer Vision.</li>
+              <li>Built full-stack web applications: University Website, Furniture E-commerce (React).</li>
+              <li>Backend solutions: School Database System (SQL), Hotel Management (.NET MVC).</li>
+              <li>Applied Python, C++, C#, JavaScript, and Dart across production apps.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2021 – 2025</div>
+          <div class="tl-card">
+            <div class="tl-badge education">Education</div>
+            <h3>Bachelor's in Information Technology</h3>
+            <p class="tl-company">Faculty of IT, Sinai University · GPA: 3.7</p>
+            <ul>
+              <li>Graduation Project: Talkable — AI Sign Language Recognition System.</li>
+              <li>ICPC ECPC Qualifications 2023 — <strong>Honorable Mention</strong> (team of 3).</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATES ── -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <div class="section-label reveal">Credentials</div>
+      <h2 class="section-title reveal">Certificates & Training</h2>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <span class="cert-icon">🏆</span>
+          <div>
+            <strong>ICPC ECPC Qualifications 2023</strong>
+            <p>Honorable Mention · Sinai University Team</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <span class="cert-icon">🤖</span>
+          <div>
+            <strong>Artificial Intelligence (AI) — Score 100%</strong>
+            <p>NTI / Huawei Egyptian Talent Academy · 80 hrs</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <span class="cert-icon">💡</span>
+          <div>
+            <strong>Front-End Web Development — 120 hrs</strong>
+            <p>Information Technology Institute (ITI) · HTML, JS, React, Angular, Node.js</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <span class="cert-icon">🧠</span>
+          <div>
+            <strong>Artificial Intelligence Program</strong>
+            <p>AMIT Learning</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <span class="cert-icon">🛡️</span>
+          <div>
+            <strong>Leaders in AI & Information Warfare</strong>
+            <p>Hashemite Kingdom of Jordan</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <span class="cert-icon">🐍</span>
+          <div>
+            <strong>Introduction to Python — 20 hrs</strong>
+            <p>AITB · Cert# DT-AI-PY-240327074714</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <span class="cert-icon">⚙️</span>
+          <div>
+            <strong>Backend Development using Flask</strong>
+            <p>Python / Flask</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="section-title reveal">Let's Build Something <span class="gradient-text">Great</span></h2>
+      <p class="contact-sub reveal">Available for freelance projects, full-time roles, and collaborations.</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a href="mailto:joniurabdelhady@gmail.com" class="contact-item">
+            <span class="ci-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p>joniurabdelhady@gmail.com</p>
+            </div>
+          </a>
+          <a href="https://wa.me/201001307376?text=Hi%20Ahmed%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="contact-item whatsapp-item">
+            <span class="ci-icon">💬</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>+20 100 130 7376 — Chat directly</p>
+            </div>
+            <span class="wa-badge">Open Chat</span>
+          </a>
+          <a href="tel:+201001307376" class="contact-item">
+            <span class="ci-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <p>+20 100 130 7376</p>
+            </div>
+          </a>
+          <div class="contact-item">
+            <span class="ci-icon">📍</span>
+            <div>
+              <strong>Location</strong>
+              <p>Red Sea, Egypt · Remote Worldwide</p>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/Hady210" target="_blank" rel="noopener" class="social-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/ahmed-mohamed-abdelhady-780799280" target="_blank" rel="noopener" class="social-pill linkedin-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://www.youtube.com/@ahmedmohmedabdelhady2735" target="_blank" rel="noopener" class="social-pill yt-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project idea / Job offer / Collaboration" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container footer-inner">
+      <p class="logo">AMA<span class="accent">.</span></p>
+      <div class="footer-socials">
+        <a href="https://github.com/Hady210" target="_blank" rel="noopener" title="GitHub" class="footer-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ahmed-mohamed-abdelhady-780799280" target="_blank" rel="noopener" title="LinkedIn" class="footer-icon linkedin-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@ahmedmohmedabdelhady2735" target="_blank" rel="noopener" title="YouTube" class="footer-icon yt-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://wa.me/201001307376" target="_blank" rel="noopener" title="WhatsApp" class="footer-icon wa-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 Ahmed Mohamed Abdelhady · Built with passion</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
