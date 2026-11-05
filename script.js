@@ -154,7 +154,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 /* ═══════════════════════════════════════════
    CONTACT FORM
 ═══════════════════════════════════════════ */
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/joniurabdelhady@gmail.com';
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
 
 document.getElementById('contact-form').addEventListener('submit', async function (e) {
   e.preventDefault();
@@ -168,14 +168,18 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   status.textContent = '';
   status.className = 'form-status';
 
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 15000);
+
   try {
     const res  = await fetch(FORM_ENDPOINT, {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: new FormData(form),
+      signal: controller.signal,
     });
     const data = await res.json().catch(() => ({}));
-    if (!res.ok || String(data.success) !== 'true') {
+    if (!res.ok || data.success !== true) {
       throw new Error(data.message || `HTTP ${res.status}`);
     }
 
@@ -195,6 +199,8 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     btn.disabled = false;
     status.innerHTML = 'Couldn\'t send right now — please email <a href="mailto:joniurabdelhady@gmail.com">joniurabdelhady@gmail.com</a> or message me on <a href="https://wa.me/201001307376" target="_blank" rel="noopener">WhatsApp</a>.';
     status.classList.add('error');
+  } finally {
+    clearTimeout(timer);
   }
 });
 
